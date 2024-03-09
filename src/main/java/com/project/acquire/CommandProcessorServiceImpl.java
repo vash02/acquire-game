@@ -1,9 +1,9 @@
-package com.oosd.project06;
+package com.project.acquire;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import com.oosd.project06.utils.RequestValidator;
+import com.project.acquire.utils.RequestValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Service;

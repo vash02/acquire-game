@@ -1,4 +1,4 @@
-package com.oosd.project06;
+package com.project.acquire;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -10,7 +10,7 @@ import static org.springframework.boot.test.context.SpringBootTest.WebEnvironmen
 @SpringBootTest(webEnvironment = RANDOM_PORT,
         properties = {"spring.cloud.config.enabled=false"})
 @EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
-class Project06ApplicationTests {
+class GameApplicationTests {
 
     @Test
     void contextLoads() {

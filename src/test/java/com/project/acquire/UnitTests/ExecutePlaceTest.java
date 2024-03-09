@@ -1,8 +1,8 @@
-package com.oosd.project06.UnitTests;
+package com.project.acquire.UnitTests;
 
 import com.google.gson.Gson;
-import com.oosd.project06.CommandProcessorServiceImpl;
-import com.oosd.project06.utils.RequestValidator;
+import com.project.acquire.CommandProcessorServiceImpl;
+import com.project.acquire.utils.RequestValidator;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;

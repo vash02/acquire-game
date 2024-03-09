@@ -1,13 +1,13 @@
-package com.oosd.project06;
+package com.project.acquire;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Project06Application {
+public class GameApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Project06Application.class, args);
+        SpringApplication.run(GameApplication.class, args);
     }
 
 }

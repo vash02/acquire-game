@@ -1,16 +1,14 @@
-package com.oosd.project06.IntegrationTests;
+package com.project.acquire.IntegrationTests;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import com.oosd.project06.CommandProcessorServiceImpl;
+import com.project.acquire.CommandProcessorServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
-import org.springframework.boot.test.context.SpringBootTest;
 
 import java.io.FileReader;
 import java.io.IOException;

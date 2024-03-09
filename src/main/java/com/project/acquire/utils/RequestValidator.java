@@ -1,4 +1,4 @@
-package com.oosd.project06.utils;
+package com.project.acquire.utils;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;

@@ -1,11 +1,11 @@
-package com.oosd.project06;
+package com.project.acquire;
 
 import GameObjects.*;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import com.oosd.project06.utils.Pair;
+import com.project.acquire.utils.Pair;
 
 import java.util.ArrayList;
 import java.util.Collections;

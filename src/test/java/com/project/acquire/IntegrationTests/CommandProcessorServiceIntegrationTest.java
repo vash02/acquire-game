@@ -1,4 +1,4 @@
-package com.oosd.project06.IntegrationTests;
+package com.project.acquire.IntegrationTests;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -6,9 +6,9 @@ import GameObjects.State;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import com.oosd.project06.CommandProcessor;
-import com.oosd.project06.CommandProcessorService;
-import com.oosd.project06.CommandProcessorServiceImpl;
+import com.project.acquire.CommandProcessor;
+import com.project.acquire.CommandProcessorService;
+import com.project.acquire.CommandProcessorServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;

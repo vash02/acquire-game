@@ -1,18 +1,16 @@
-package com.oosd.project06.UnitTests;
+package com.project.acquire.UnitTests;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import com.oosd.project06.CommandProcessorServiceImpl;
-import com.oosd.project06.utils.RequestValidator;
+import com.project.acquire.CommandProcessorServiceImpl;
+import com.project.acquire.utils.RequestValidator;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.context.annotation.Bean;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;

@@ -1,4 +1,4 @@
-package com.oosd.project06;
+package com.project.acquire;
 
 import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;

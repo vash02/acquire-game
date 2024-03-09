@@ -1,7 +1,7 @@
-package com.oosd.project06;
+package com.project.acquire;
 
 import GameObjects.*;
-import com.oosd.project06.utils.Pair;
+import com.project.acquire.utils.Pair;
 
 import java.util.*;
 
