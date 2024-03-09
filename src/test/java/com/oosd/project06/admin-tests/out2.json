@@ -1,0 +1,181 @@
+{
+  "board": {
+    "tiles": [
+      {
+        "row": "A",
+        "column": "3"
+      },
+      {
+        "row": "B",
+        "column": "1"
+      },
+      {
+        "row": "B",
+        "column": "2"
+      },
+      {
+        "row": "B",
+        "column": "4"
+      },
+      {
+        "row": "B",
+        "column": "5"
+      },
+      {
+        "row": "B",
+        "column": "6"
+      },
+      {
+        "row": "C",
+        "column": "3"
+      },
+      {
+        "row": "D",
+        "column": "3"
+      },
+      {
+        "row": "E",
+        "column": "3"
+      }
+    ],
+    "hotels": [
+      {
+        "hotel": "American",
+        "tiles": [
+          {
+            "row": "B",
+            "column": "4"
+          },
+          {
+            "row": "B",
+            "column": "5"
+          },
+          {
+            "row": "B",
+            "column": "6"
+          }
+        ]
+      },
+      {
+        "hotel": "Continental",
+        "tiles": [
+          {
+            "row": "C",
+            "column": "3"
+          },
+          {
+            "row": "D",
+            "column": "3"
+          },
+          {
+            "row": "E",
+            "column": "3"
+          }
+        ]
+      },
+      {
+        "hotel": "Sackson",
+        "tiles": [
+          {
+            "row": "B",
+            "column": "1"
+          },
+          {
+            "row": "B",
+            "column": "2"
+          }
+        ]
+      }
+    ]
+  },
+  "players": [
+    {
+      "player": "One",
+      "cash": 5000,
+      "shares": [
+        {
+          "share": "Continental",
+          "count": 10
+        },
+        {
+          "share": "Festival",
+          "count": 5
+        },
+        {
+          "share": "American",
+          "count": 2
+        },
+        {
+          "share": "Sackson",
+          "count": 1
+        }
+      ],
+      "tiles": [
+        {
+          "row": "B",
+          "column": "3"
+        },
+        {
+          "row": "H",
+          "column": "11"
+        },
+        {
+          "row": "H",
+          "column": "12"
+        },
+        {
+          "row": "I",
+          "column": "10"
+        },
+        {
+          "row": "I",
+          "column": "11"
+        },
+        {
+          "row": "I",
+          "column": "12"
+        }
+      ]
+    },
+    {
+      "player": "Two",
+      "cash": 6000,
+      "shares": [
+        {
+          "share": "Continental",
+          "count": 5
+        },
+        {
+          "share": "Festival",
+          "count": 5
+        }
+      ],
+      "tiles": [
+        {
+          "row": "F",
+          "column": "10"
+        },
+        {
+          "row": "F",
+          "column": "11"
+        },
+        {
+          "row": "F",
+          "column": "12"
+        },
+        {
+          "row": "G",
+          "column": "10"
+        },
+        {
+          "row": "G",
+          "column": "11"
+        },
+        {
+          "row": "G",
+          "column": "12"
+        }
+      ]
+    }
+  ]
+}
