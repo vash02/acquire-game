@@ -1,5 +1,6 @@
 package GameObjects;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 public class Tile {

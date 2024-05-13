@@ -1,9 +1,8 @@
 package GameObjects;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
+import com.oosd.project09.GameFunctions.GameOperations;
+
+import java.util.*;
 
 public class Board {
     private final int ROWS = 9;
@@ -15,6 +14,8 @@ public class Board {
     // Array to represent hotels
     private int[][] hotels;
 
+    private Hotel[] hotelsInfo;
+
     private Map<String, Integer> hotelLabels;
 
     public Board() {
@@ -25,6 +26,8 @@ public class Board {
         hotels = new int[ROWS][COLUMNS];
 
         initializeHotelLabels();
+
+        hotelsInfo = GameOperations.getHotelInfo();
     }
 
     // Method to set the hotel value for a tile at given row and column
@@ -42,17 +45,23 @@ public class Board {
         occupiedTiles[row][column] = true;
     }
 
+    public Hotel[] getHotelsInfo(){
+        return hotelsInfo;
+    }
+
     // Method to check if a tile at given row and column is occupied
     public boolean isTileOccupied(int row, int column) {
         return occupiedTiles[row][column];
     }
 
-    public int getHotelLabel(String hotelName) {
+    public Integer getHotelIndex(String hotelName) {
+        initializeHotelLabels();
         Integer label = hotelLabels.get(hotelName);
         return label != null ? label : 0; // Assuming 0 represents no hotel label
     }
 
     public String getHotelName(int index) {
+        initializeHotelLabels();
         for (Map.Entry<String, Integer> entry : hotelLabels.entrySet()) {
             if (entry.getValue() == index) {
                 return entry.getKey();
@@ -60,6 +69,29 @@ public class Board {
         }
         return null; // Return null if no hotel name is found for the given index
     }
+
+    public List<Hotel> getAvailableHotels() {
+        List<Hotel> availableHotels = new ArrayList<>();
+        for (Hotel hotel : hotelsInfo) {
+            boolean isOnBoard = false;
+            for (int[] row : hotels) {
+                for (int hotelIndex : row) {
+                    if (hotelIndex == getHotelIndex(hotel.getLabel())) {
+                        isOnBoard = true;
+                        break;
+                    }
+                }
+                if (isOnBoard) {
+                    break;
+                }
+            }
+            if (!isOnBoard) {
+                availableHotels.add(hotel);
+            }
+        }
+        return availableHotels;
+    }
+
 
     public int[][] getHotels(){
         return hotels;
@@ -87,6 +119,40 @@ public class Board {
         }
     }
 
+    public Map<String, Integer> getHotelLabels() {
+        return hotelLabels;
+    }
+
+    public List<Integer> getAvaiableHotelShares() {
+        List<Integer> availableHotelSharesList = new ArrayList<>();
+        for (Hotel hotel : hotelsInfo){
+            if (hotel == null)
+                availableHotelSharesList.add(null);
+            else
+                availableHotelSharesList.add(hotel.getStocksCertificates());
+        }
+        return availableHotelSharesList;
+    }
+
+    public Board getBoardCopy(){
+        Board boardClone = new Board();
+        for(int i=0;i<9;i++){
+            for(int j=0;j<12;j++){
+                if(occupiedTiles[i][j]==true){
+                    boardClone.occupyTile(i, j);
+                }
+                if(hotels[i][j]!=0){
+                    boardClone.setHotel(i, j, hotels[i][j]);
+                }
+            }
+        }
+        Hotel[] cloneHotelInfo = boardClone.getHotelsInfo();
+        for(int i=0;i< cloneHotelInfo.length;i++){
+            cloneHotelInfo[i].setStocksCertificates(hotelsInfo[i].getStocksCertificates());
+        }
+        return boardClone;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -98,6 +164,7 @@ public class Board {
                 Arrays.deepEquals(hotels, board.hotels) &&
                 Objects.equals(hotelLabels, board.hotelLabels);
     }
+
 
 
 
